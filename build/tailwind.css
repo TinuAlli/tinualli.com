@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply a4k;
+    @apply a3g;
   }
 }
 
@@ -12,7 +12,7 @@
 @tailwind utilities;
 
 html {
-  @apply a4l;
+  @apply a3h;
 }
 
 .header {
@@ -20,7 +20,7 @@ html {
 }
 
 .sticky {
-  @apply aj ad[9999] an a4m a34 aN dark:a0;
+  @apply aj ad[9999] an a3i a34 aN dark:a0;
   backdrop-filter: blur(5px);
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
@@ -56,7 +56,7 @@ html {
   background-clip: text;
   text-fill-color: transparent;
   opacity: 0.2;
-  @apply a1 a2L/2 a2 a2M/2 a1F[40px] a4n !a1H sm:a1F[60px] lg:a1F[95px];
+  @apply a1 a2L/2 a2 a2M/2 a1F[40px] a3j !a1H sm:a1F[60px] lg:a1F[95px];
 }
 
 .dark .title {
@@ -75,15 +75,15 @@ html {
   @apply aH dark:aI;
 }
 .submenu-item a.active span svg {
-  @apply a4o;
+  @apply a3k;
 }
 
 .tns-controls {
-  @apply a1 a2L/2 a4p a3h a5 a2M/2 a12 lg:a4q[70px] lg:a4c;
+  @apply a1 a2L/2 a3l a3m a5 a2M/2 a12 lg:a3n[70px] lg:a3o;
 }
 
 .tns-controls button {
-  @apply a5 a2o a2p a9 am a1j a16 a3c aH hover:a3r hover:aI dark:an dark:a3c dark:aI dark:hover:a16 dark:hover:a3r dark:hover:aI;
+  @apply a5 a2o a2p a9 am a1j a16 a3p aH hover:a3q hover:aI dark:an dark:a3p dark:aI dark:hover:a16 dark:hover:a3q dark:hover:aI;
 }
 
 .grid-sizer {
@@ -91,5 +91,5 @@ html {
 }
 
 .portfolio-btn-wrapper button.active {
-  @apply a3g;
+  @apply a3r;
 }

@@ -1,19 +1,88 @@
-collections:
-  authors:
-    output: true
+# Dependencies
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+  gfm_quirks: [paragraph_end]
 
-defaults:
-  - scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: "author"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
+source: blog
+destination: dist/blog
+
+# Permalinks
+permalink: pretty
+
+# Setup
+title: BBVA Blog
+tagline: "Hear from us"
+description: "Ideas from our stable"
+url: http://www.tinualli.com/blog
+
+author:
+  name: "BBVA Admin"
+  url: https://twitter.com/bbva
+
+# Custom vars
+version: 1.0.0
+
+github:
+  repo: https://github.com/TinuAlli/tinualli.com
+
+footer-links:
+  facebook: bbva
+  twitter: bbva
+
+pagination:
+  # Site-wide kill switch, disabled here it doesn't run at all
+  enabled: true
+  permalink: "/page/:num/"
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+
+autopages:
+  # Site-wide kill switch, disable here and it doesn't run at all
+  enabled: true
+
+  # Category pages, omit entire config element to disable
+  categories:
+    # Optional, the list of layouts that should be processed for every category found in the site
+    layouts:
+      - "autopage_category.html"
+    # Optional, the title that each category paginate page should get (:cat is replaced by the Category name)
+    title: ":cat"
+    # Optional, the permalink for the  pagination page (:cat is replaced),
+    # the pagination permalink path is then appended to this permalink structure
+    permalink: "/category/:cat"
+    # Optional, when true logging related to category pages will be supressed.
+    silent: false
+    slugify:
+      mode: "default" # :cat is slugified. Modes: default, raw, pretty, ascii, latin
+      case: false # Whether to replace all uppercase letters with their lowercase counterparts
+
+plugins: [jekyll-youtube]
+
+
+
+  # Collection pages, omit to disable
+  # collections:
+  #   layouts:
+  #     - 'autopage_collection.html'
+  #   title: 'Posts in collection :coll' # :coll is replaced by the collection name
+  #   permalink: '/collection/:coll'
+  #   silent: false
+  #   slugify:
+  #     mode: 'default'   # :coll is slugified.
+  #     case: false
+
+  # # Tag pages, omit to disable
+  # tags:
+  #   layouts:
+  #     - 'autopage_tags.html'
+  #   title: 'Posts tagged with :tag' # :tag is replaced by the tag name
+  #   permalink: '/tag/:tag'
+  #   silent: false
+  #   slugify:
+  #     mode: 'default'   # :tag is slugified.
+  #     case: false
